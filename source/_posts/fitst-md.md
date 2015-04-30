@@ -39,3 +39,5 @@ var myTest = function() {
     };
 }
 ```
+使用的时候`var test= myTest(); test.publicMethod();//输出some private`
+我们也可以在使用的时候才初始化！我们可以再另外一个构造函数里来初始化这些代码。
