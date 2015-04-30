@@ -8,7 +8,7 @@
   <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="cqolife">
-<meta property="og:url" content="http://cqolife.github.io/index.html">
+<meta property="og:url" content="http://cqolife.com/cqolife/index.html">
 <meta property="og:site_name" content="cqolife">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -57,13 +57,104 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://cqolife.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://cqolife.com/cqolife"></form>
       </div>
     </div>
   </div>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-aa" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/01/aa/" class="article-date">
+  <time datetime="2015-04-30T17:04:36.000Z" itemprop="datePublished">2015-05-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javacript/">javacript</a>►<a class="article-category-link" href="/categories/javacript/设计模式/">设计模式</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/01/aa/">aa</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var myTest = &#123;</span><br><span class="line">　　property1:<span class="string">"something"</span>;</span><br><span class="line">　　property2:<span class="string">"something else"</span>;</span><br><span class="line">　　method1:<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">　　　　console.log(<span class="string">"Hello world!"</span>);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在扩展对象，可以添加自己的私有成员和方法，使用闭包的形式在其内部封装这些变量和函数声明，只暴露你想要暴露的public成员和方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var myTest = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">　　//私有变量和方法</span><br><span class="line">    var pVariable = <span class="string">"some private"</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">showPrivate</span></span>() &#123;</span><br><span class="line">        console.log(pVariable);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">        publicMethod: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            showPrivate();</span><br><span class="line">        &#125;,</span><br><span class="line">        publicVar: <span class="string">"the public can see this"</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用的时候<code>var test= myTest(); test.publicMethod();//输出some private</code><br>我们也可以在使用的时候才初始化！我们可以再另外一个构造函数里来初始化这些代码。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cqolife.com/cqolife/2015/05/01/aa/" data-id="ci94fcj3j0000q3w2qpmxzxyb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javacript/">javacript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/30/hello-world/" class="article-date">
+  <time datetime="2015-04-30T06:17:17.000Z" itemprop="datePublished">2015-04-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/30/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cqolife.com/cqolife/2015/04/30/hello-world/" data-id="ci94fcj470007q3w2ohhjmnes" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-fitst-md" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -91,61 +182,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>所谓单例模式就是在保证一个类只有一个实例，实现的方法一般是先判断实例存在否，如果存在直接返回，如果不存在就创建了再返回。<br>那如何创建一个单例呢？其中最简单的一个方式是使用对象字面量的方法，其字面量可以包含大量的属性与方法。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var myTest = &#123;</span><br><span class="line">　　property1:<span class="string">"something"</span>;</span><br><span class="line">　　property2:<span class="string">"something else"</span>;</span><br><span class="line">　　method1:<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">　　　　console.log(<span class="string">"Hello world!"</span>);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>所谓单例模式就是在保证一个类只有一个实例，实现的方法一般是先判断实例存在否，如果存在直接返回，如果不存在就创建了再返回。<br>那如何创建一个单例呢？其中最简单的一个方式是使用对象字面量的方法，其字面量可以包含大量的属性与方法。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var myTest = &#123;</span><br><span class="line">　　property1:<span class="string">"something"</span>;</span><br><span class="line">　　property2:<span class="string">"something else"</span>;</span><br><span class="line">　　method1:<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">　　　　console.log(<span class="string">"Hello world!"</span>);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在扩展对象，可以添加自己的私有成员和方法，使用闭包的形式在其内部封装这些变量和函数声明，只暴露你想要暴露的public成员和方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var myTest = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">　　//私有变量和方法</span><br><span class="line">    var pVariable = <span class="string">"some private"</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">showPrivate</span></span>() &#123;</span><br><span class="line">        console.log(pVariable);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">        publicMethod: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            showPrivate();</span><br><span class="line">        &#125;,</span><br><span class="line">        publicVar: <span class="string">"the public can see this"</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用的时候<code>var test= myTest(); test.publicMethod();//输出some private</code><br>我们也可以在使用的时候才初始化！我们可以再另外一个构造函数里来初始化这些代码。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cqolife.github.io/2015/04/29/fitst-md/" data-id="ci926ik8l00003jvouwwdtc9g" class="article-share-link">Share</a>
+      <a data-url="http://cqolife.com/cqolife/2015/04/29/fitst-md/" data-id="ci94fcj490008q3w2dyt9ya0c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javacript/">javacript</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/29/hello-world/" class="article-date">
-  <time datetime="2015-04-29T02:41:45.000Z" itemprop="datePublished">2015-04-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://cqolife.github.io/2015/04/29/hello-world/" data-id="ci926ik9a00073jvo1l5adf6l" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -162,7 +212,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javacript/">javacript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javacript/设计模式/">设计模式</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javacript/">javacript</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/javacript/设计模式/">设计模式</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -171,7 +221,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/javacript/">javacript</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/javacript/">javacript</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -189,7 +239,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -201,11 +251,15 @@
       <ul>
         
           <li>
-            <a href="/2015/04/29/fitst-md/">学习笔记-设计模式之单例模式</a>
+            <a href="/2015/05/01/aa/">aa</a>
           </li>
         
           <li>
-            <a href="/2015/04/29/hello-world/">Hello World</a>
+            <a href="/2015/04/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/29/fitst-md/">学习笔记-设计模式之单例模式</a>
           </li>
         
       </ul>
