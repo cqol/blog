@@ -68,4 +68,4 @@ theme: hexo-theme-landscape
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:cqol/cqol.github.com.git
+  repo: git@github.com:cqol/cqolife.git
