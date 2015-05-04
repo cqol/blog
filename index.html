@@ -65,52 +65,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-aa" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/cqolife/2015/05/01/aa/" class="article-date">
-  <time datetime="2015-04-30T17:04:36.000Z" itemprop="datePublished">2015-05-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/cqolife/categories/javacript/">javacript</a>►<a class="article-category-link" href="/cqolife/categories/javacript/设计模式/">设计模式</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/cqolife/2015/05/01/aa/">aa</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var myTest = &#123;</span><br><span class="line">　　property1:<span class="string">"something"</span>;</span><br><span class="line">　　property2:<span class="string">"something else"</span>;</span><br><span class="line">　　method1:<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">　　　　console.log(<span class="string">"Hello world!"</span>);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>cqol在扩展对象，可以添加自己的私有成员和方法，使用闭包的形式在其内部封装这些变量和函数声明，只暴露你想要暴露的public成员和方法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var myTest = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">　　//私有变量和方法</span><br><span class="line">    var pVariable = <span class="string">"some private"</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">showPrivate</span></span>() &#123;</span><br><span class="line">        console.log(pVariable);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">        publicMethod: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            showPrivate();</span><br><span class="line">        &#125;,</span><br><span class="line">        publicVar: <span class="string">"the public can see this"</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用的时候<code>var test= myTest(); test.publicMethod();//输出some private</code><br>我们也可以在使用的时候才初始化！我们可以再另外一个构造函数里来初始化这些代码。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://cqolife.com/cqolife/2015/05/01/aa/" data-id="ci9988dd80000vnvo9etrpa33" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cqolife/tags/javacript/">javacript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/cqolife/2015/04/30/hello-world/" class="article-date">
@@ -146,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cqolife.com/cqolife/2015/04/30/hello-world/" data-id="ci9988ddx0007vnvo3n0opik4" class="article-share-link">Share</a>
+      <a data-url="http://cqolife.com/cqolife/2015/04/30/hello-world/" data-id="ci998dmkm0007wqvonj88iqjt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -187,11 +141,14 @@
 <p>在扩展对象，可以添加自己的私有成员和方法，使用闭包的形式在其内部封装这些变量和函数声明，只暴露你想要暴露的public成员和方法</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var myTest = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">　　//私有变量和方法</span><br><span class="line">    var pVariable = <span class="string">"some private"</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">showPrivate</span></span>() &#123;</span><br><span class="line">        console.log(pVariable);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">        publicMethod: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            showPrivate();</span><br><span class="line">        &#125;,</span><br><span class="line">        publicVar: <span class="string">"the public can see this"</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>使用的时候<code>var test= myTest(); test.publicMethod();//输出some private</code><br>我们也可以在使用的时候才初始化！我们可以再另外一个构造函数里来初始化这些代码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var myTest = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    var instantiated;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">init</span></span>() &#123;//这里定义单例代码</span><br><span class="line">        <span class="built_in">return</span> &#123;</span><br><span class="line">            publicMethod: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">                console.log(<span class="string">"Hello World"</span>);</span><br><span class="line">            &#125;,</span><br><span class="line">            publicProperty: <span class="string">"something testPublic"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">        getInstance: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            <span class="keyword">if</span>(!instantiated) &#123;</span><br><span class="line">                instantiated = init();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">return</span> instantiated;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用的时候<code>var bbb = myTest1();bbb.getInstance().publicMethod();//输出Hello World</code><br>单例模式.一般用在系统间各种模式的通信协调上。下面是一个单例模式的最佳实践</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">var BestTest = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    //单例的一些参数集合</span><br><span class="line">    <span class="keyword">function</span> bestTest(args) &#123;</span><br><span class="line">        var args = args || &#123;&#125;;</span><br><span class="line">        this.name = <span class="string">"bestTest"</span>;</span><br><span class="line">        this.pointX = args.pointX || <span class="number">6</span>;</span><br><span class="line">        this.pointY = args.pointY || <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    var instance //实例的容器</span><br><span class="line">    var _static = &#123;</span><br><span class="line">        name: <span class="string">"bestTest"</span>,</span><br><span class="line">        getInstance: <span class="keyword">function</span>(args) &#123;</span><br><span class="line">            <span class="keyword">if</span>(instance === undefined) &#123;</span><br><span class="line">                instance = new bestTest(args);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">return</span> instance;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> _static;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var sss = BestTest().getInstance(&#123; pointX: <span class="number">77</span> &#125;);</span><br><span class="line">console.log(sss.pointX); // 输出 <span class="number">77</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cqolife.com/cqolife/2015/04/29/fitst-md/" data-id="ci9988ddy0008vnvom82kiljn" class="article-share-link">Share</a>
+      <a data-url="http://cqolife.com/cqolife/2015/04/29/fitst-md/" data-id="ci998dmjx0000wqvor7iowp1u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/cqolife/tags/javacript/">javacript</a></li></ul>
@@ -212,7 +169,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cqolife/categories/javacript/">javacript</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/cqolife/categories/javacript/设计模式/">设计模式</a><span class="category-list-count">2</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cqolife/categories/javacript/">javacript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/cqolife/categories/javacript/设计模式/">设计模式</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -221,7 +178,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/cqolife/tags/javacript/">javacript</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/cqolife/tags/javacript/">javacript</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -239,7 +196,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cqolife/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/cqolife/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/cqolife/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -249,10 +206,6 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/cqolife/2015/05/01/aa/">aa</a>
-          </li>
         
           <li>
             <a href="/cqolife/2015/04/30/hello-world/">Hello World</a>
