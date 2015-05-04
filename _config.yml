@@ -69,3 +69,8 @@ theme: hexo-theme-landscape
 deploy:
   type: git
   repo: git@github.com:cqol/cqolife.git
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
