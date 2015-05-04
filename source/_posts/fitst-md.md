@@ -41,3 +41,53 @@ var myTest = function() {
 ```
 使用的时候`var test= myTest(); test.publicMethod();//输出some private`
 我们也可以在使用的时候才初始化！我们可以再另外一个构造函数里来初始化这些代码。
+
+```bash
+var myTest = function() {
+    var instantiated;
+    function init() {//这里定义单例代码
+        return {
+            publicMethod: function() {
+                console.log("Hello World");
+            },
+            publicProperty: "something testPublic"
+        }
+    };
+    return {
+        getInstance: function() {
+            if(!instantiated) {
+                instantiated = init();
+            }
+            return instantiated;
+        }
+    };
+}
+```
+调用的时候`var bbb = myTest1();bbb.getInstance().publicMethod();//输出Hello World`
+单例模式.一般用在系统间各种模式的通信协调上。下面是一个单例模式的最佳实践
+
+```bash
+var BestTest = function() {
+    //单例的一些参数集合
+    function bestTest(args) {
+        var args = args || {};
+        this.name = "bestTest";
+        this.pointX = args.pointX || 6;
+        this.pointY = args.pointY || 10;
+    }
+    var instance //实例的容器
+    var _static = {
+        name: "bestTest",
+        getInstance: function(args) {
+            if(instance === undefined) {
+                instance = new bestTest(args);
+            }
+            return instance;
+        }
+    }
+    return _static;
+}
+
+var sss = BestTest().getInstance({ pointX: 77 });
+console.log(sss.pointX); // 输出 77 
+```
