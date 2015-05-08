@@ -65,6 +65,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-notes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2015/05/08/notes/" class="article-date">
+  <time datetime="2015-05-08T06:27:21.000Z" itemprop="datePublished">2015-05-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/javacript/">javacript</a>►<a class="article-category-link" href="/blog/categories/javacript/学习笔记/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2015/05/08/notes/">notes</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="各种apply的妙用">各种<code>apply</code>的妙用</h3><p>合并数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], b=[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="built_in">Array</span>.prototype.push.apply(a, b);</span><br><span class="line"><span class="comment">//a = [1,2,3,4,5,6];</span></span><br></pre></td></tr></table></figure></p>
+<p>数组对象转数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br></pre></td></tr></table></figure></p>
+<p>用0补全位数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//TODO: 有问题！</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">preFixInt</span><span class="params">(num, length)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (num / <span class="built_in">Math</span>.pow(<span class="number">10</span>,length)).toFixed(length).substr(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>将一个数组插入另一个数组的指定位置<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>], b=[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>], insertIndex=<span class="number">3</span>;</span><br><span class="line">a.splice.apply(a, <span class="built_in">Array</span>.prototype.concat(insertIndex, <span class="number">0</span>, b));</span><br><span class="line"><span class="comment">//a = [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br></pre></td></tr></table></figure></p>
+<p>快速取数组最大和最小值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]); <span class="comment">//3</span></span><br><span class="line"><span class="built_in">Math</span>.min.apply(<span class="built_in">Math</span>, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]); <span class="comment">//1</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="有意思的技巧">有意思的技巧</h3><p>反转字符串<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"aaaaabbbccccbddddd"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.split(<span class="string">""</span>).reverse().join(<span class="string">""</span>));</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cqolife.com/blog/2015/05/08/notes/" data-id="ci9fd41af0007zkvoi6bhdwbj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javacript/">javacript</a></li></ul>
+
+    </footer>
+
+  </div>
+  
+</article>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2015/04/30/hello-world/" class="article-date">
@@ -100,7 +151,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cqolife.com/blog/2015/04/30/hello-world/" data-id="ci99h2wbr0007f5vo4p6ok714" class="article-share-link">Share</a>
+      <a data-url="http://cqolife.com/blog/2015/04/30/hello-world/" data-id="ci9fd41ai000czkvoekpqiv3a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -151,7 +202,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cqolife.com/blog/2015/04/29/fitst-md/" data-id="ci99h2wb20000f5vobsec320t" class="article-share-link">Share</a>
+      <a data-url="http://cqolife.com/blog/2015/04/29/fitst-md/" data-id="ci9fd419p0000zkvonavc52uy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javacript/">javacript</a></li></ul>
@@ -175,7 +226,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/">javacript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/设计模式/">设计模式</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/">javacript</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/学习笔记/">学习笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/设计模式/">设计模式</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -184,7 +235,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/javacript/">javacript</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/javacript/">javacript</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -202,7 +253,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -212,6 +263,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2015/05/08/notes/">notes</a>
+          </li>
         
           <li>
             <a href="/blog/2015/04/30/hello-world/">Hello World</a>
