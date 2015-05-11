@@ -101,11 +101,13 @@
 <p>将一个数组插入另一个数组的指定位置<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>], b=[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>], insertIndex=<span class="number">3</span>;</span><br><span class="line">a.splice.apply(a, <span class="built_in">Array</span>.prototype.concat(insertIndex, <span class="number">0</span>, b));</span><br><span class="line"><span class="comment">//a = [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br></pre></td></tr></table></figure></p>
 <p>快速取数组最大和最小值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]); <span class="comment">//3</span></span><br><span class="line"><span class="built_in">Math</span>.min.apply(<span class="built_in">Math</span>, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]); <span class="comment">//1</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="有意思的技巧">有意思的技巧</h3><p>反转字符串<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"aaaaabbbccccbddddd"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.split(<span class="string">""</span>).reverse().join(<span class="string">""</span>));</span><br></pre></td></tr></table></figure></p>
+<p>数组去重<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">funciton unq(a) &#123;</span><br><span class="line">  <span class="keyword">var</span> b = [], c = &#123;&#125;, i;</span><br><span class="line">  <span class="keyword">for</span> (i <span class="keyword">in</span> a) &#123;</span><br><span class="line">    c[a[i]] || (b.push(a[i])), c[a[i]] = <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.prototype.unq = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> tempArr = [];</span><br><span class="line">  <span class="keyword">var</span> tempObj = &#123;&#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="keyword">this</span>.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!(<span class="keyword">this</span>[i] <span class="keyword">in</span> tempObj) || !(<span class="keyword">this</span>[i] === tempObj[<span class="keyword">this</span>[i]])) &#123;</span><br><span class="line">      tempArr.push(<span class="keyword">this</span>[i]);</span><br><span class="line">      tempObj[<span class="keyword">this</span>[i]] = <span class="keyword">this</span>[i];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> tempArr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>生成随机数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">randomFrom</span><span class="params">(low, up)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> choices = up - low + <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*choices + low);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cqolife.com/blog/2015/05/08/notes/" data-id="ci9fd41af0007zkvoi6bhdwbj" class="article-share-link">Share</a>
+      <a data-url="http://cqolife.com/blog/2015/05/08/notes/" data-id="ci9jbg64i000cyhvo99ynrmuu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javacript/">javacript</a></li></ul>
@@ -116,6 +118,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/blog/2015/05/11/types/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          types
+        
+      </div>
+    </a>
   
   
     <a href="/blog/2015/04/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -155,7 +166,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/">javacript</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/学习笔记/">学习笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/设计模式/">设计模式</a><span class="category-list-count">1</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/">javacript</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/学习笔记/">学习笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/数据类型/">数据类型</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/javacript/设计模式/">设计模式</a><span class="category-list-count">1</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -164,7 +175,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/javacript/">javacript</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/javacript/">javacript</a><span class="tag-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -182,7 +193,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/05/">May 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -192,6 +203,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2015/05/11/types/">types</a>
+          </li>
         
           <li>
             <a href="/blog/2015/05/08/notes/">notes</a>
