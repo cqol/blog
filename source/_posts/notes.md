@@ -48,3 +48,34 @@ Math.min.apply(Math, [1,2,3]); //1
 var str = "aaaaabbbccccbddddd";
 console.log(str.split("").reverse().join(""));
 ```
+数组去重
+```javascript
+funciton unq(a) {
+  var b = [], c = {}, i;
+  for (i in a) {
+    c[a[i]] || (b.push(a[i])), c[a[i]] = true;
+  }
+  return b;
+}
+
+Array.prototype.unq = function () {
+  var tempArr = [];
+  var tempObj = {};
+  for (var i=0; i<this.length; i++) {
+    if (!(this[i] in tempObj) || !(this[i] === tempObj[this[i]])) {
+      tempArr.push(this[i]);
+      tempObj[this[i]] = this[i];
+    }
+    
+  }
+  return tempArr;
+}
+```
+
+生成随机数
+```javascript
+function randomFrom(low, up) {
+  var choices = up - low + 1;
+  return Math.floor(Math.random()*choices + low);
+}
+```
