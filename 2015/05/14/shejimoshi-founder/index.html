@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>types | cqolife</title>
+  <title>学习笔记-设计模式之创建者模式 | cqolife</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="javascript中得各种数据类型基本数据类型：number, string, Boolean复合（应用）数据类型：function, object, array特殊数据类型：undefined, null
-待续……">
+  <meta name="description" content="创建者模式可以将一个复杂对象的构建与其表现形式相分离，使得同样的构建过程可以创建不同的表现形式。也就是说如果我们用了创建者模式，那么用户只需制定需要建造的类型就可以得到，而具体建造的过程和细节无需了解。上个简单例子….
+1234567891011121314function getBeerById(id, callback) &amp;#123;    //使用Id来请求数据，返回数据。    getRe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="types">
-<meta property="og:url" content="http://cqolife.com/blog/2015/05/11/types/index.html">
+<meta property="og:title" content="学习笔记-设计模式之创建者模式">
+<meta property="og:url" content="http://cqolife.com/blog/2015/05/14/shejimoshi-founder/index.html">
 <meta property="og:site_name" content="cqolife">
-<meta property="og:description" content="javascript中得各种数据类型基本数据类型：number, string, Boolean复合（应用）数据类型：function, object, array特殊数据类型：undefined, null
-待续……">
+<meta property="og:description" content="创建者模式可以将一个复杂对象的构建与其表现形式相分离，使得同样的构建过程可以创建不同的表现形式。也就是说如果我们用了创建者模式，那么用户只需制定需要建造的类型就可以得到，而具体建造的过程和细节无需了解。上个简单例子….
+1234567891011121314function getBeerById(id, callback) &amp;#123;    //使用Id来请求数据，返回数据。    getRe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="types">
-<meta name="twitter:description" content="javascript中得各种数据类型基本数据类型：number, string, Boolean复合（应用）数据类型：function, object, array特殊数据类型：undefined, null
-待续……">
+<meta name="twitter:title" content="学习笔记-设计模式之创建者模式">
+<meta name="twitter:description" content="创建者模式可以将一个复杂对象的构建与其表现形式相分离，使得同样的构建过程可以创建不同的表现形式。也就是说如果我们用了创建者模式，那么用户只需制定需要建造的类型就可以得到，而具体建造的过程和细节无需了解。上个简单例子….
+1234567891011121314function getBeerById(id, callback) &amp;#123;    //使用Id来请求数据，返回数据。    getRe">
   
     <link rel="alternative" href="/atom.xml" title="cqolife" type="application/atom+xml">
   
@@ -66,14 +66,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-types" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-shejimoshi-founder" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2015/05/11/types/" class="article-date">
-  <time datetime="2015-05-11T01:48:09.000Z" itemprop="datePublished">2015-05-11</time>
+    <a href="/blog/2015/05/14/shejimoshi-founder/" class="article-date">
+  <time datetime="2015-05-14T11:44:10.000Z" itemprop="datePublished">2015-05-14</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/javacript/">javacript</a>►<a class="article-category-link" href="/blog/categories/javacript/数据类型/">数据类型</a>
+    <a class="article-category-link" href="/blog/categories/javacript/">javacript</a>►<a class="article-category-link" href="/blog/categories/javacript/设计模式/">设计模式</a>
   </div>
 
   </div>
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      types
+      学习笔记-设计模式之创建者模式
     </h1>
   
 
@@ -92,13 +92,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="javascript中得各种数据类型">javascript中得各种数据类型</h3><p>基本数据类型：number, string, Boolean<br>复合（应用）数据类型：function, object, array<br>特殊数据类型：undefined, null</p>
-<p>待续……</p>
+        <p>创建者模式可以将一个复杂对象的构建与其表现形式相分离，使得同样的构建过程可以创建不同的表现形式。<br>也就是说如果我们用了创建者模式，那么用户只需制定需要建造的类型就可以得到，而具体建造的过程和细节无需了解。上个简单例子….</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBeerById</span><span class="params">(id, callback)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//使用Id来请求数据，返回数据。</span></span><br><span class="line">    getRequest(<span class="string">'get'</span>, <span class="string">'beer.url ? id ='</span> + id, <span class="function"><span class="keyword">function</span><span class="params">(resp)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//callback调用responseTest</span></span><br><span class="line">        callback(resp.responseTest)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> elm = <span class="built_in">document</span>.getElementById(<span class="string">'test'</span>);</span><br><span class="line">elm.addEventListener(<span class="string">'click'</span>, getBeerByIdBridge, <span class="literal">false</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBeerByIdBridge</span><span class="params">(e)</span> </span>&#123;</span><br><span class="line">    getBeerById(<span class="keyword">this</span>.id, <span class="function"><span class="keyword">function</span><span class="params">(beer)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'Requested beer:'</span> + beer);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>根据建造者的定义，表相即是回调，也就是说区数据后如何显示和处理取决于回调函数（callback）<br>相应的回调函数在处理数据的时候不需要关注是如何获取数据的。<br>我们在jquery的ajax方法里可以看到很多的回调函数，比如<code>success</code>，<code>error</code>登回调函数，这些都是创建者模式的经典例子<br>说白了：创建者模式就是-获取数据与处理数据是分离的！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cqolife.com/blog/2015/05/11/types/" data-id="ci9o4471f0007omvow9rhrz1v" class="article-share-link">Share</a>
+      <a data-url="http://cqolife.com/blog/2015/05/14/shejimoshi-founder/" data-id="ci9o4471h000comvoxj5eoc51" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javacript/">javacript</a></li></ul>
@@ -110,19 +111,10 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2015/05/14/shejimoshi-founder/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          学习笔记-设计模式之创建者模式
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2015/05/08/notes/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2015/05/11/types/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">notes</div>
+      <div class="article-nav-title">types</div>
     </a>
   
 </nav>
