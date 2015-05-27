@@ -19,6 +19,7 @@ function getBeerById(id, callback) {
         callback(resp.responseTest)
     });
 }
+
 var elm = document.getElementById('test');
 elm.addEventListener('click', getBeerByIdBridge, false);
 function getBeerByIdBridge(e) {
