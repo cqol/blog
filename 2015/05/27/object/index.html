@@ -100,10 +100,52 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Anim = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;...&#125;;</span><br><span class="line">Anim.prototype = &#123;</span><br><span class="line">    start:<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;,</span><br><span class="line">    stop:<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>另一种尝试，类面向对象的编程风格</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.method = <span class="function"><span class="keyword">function</span><span class="params">(name,fn)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.prototype[name] = fn;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;;<span class="comment">//用于链式调用</span></span><br><span class="line"><span class="keyword">var</span> Anim = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;&#125;;</span><br><span class="line">Anim.method(<span class="string">'start'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;&#125;);</span><br><span class="line">Anim.method(<span class="string">'stop'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="语义化标签">语义化标签</h3><h4 id="标签语义化的好处">标签语义化的好处</h4><ul>
+<li>去掉样式或者样式丢失时页面结构依然清晰分明</li>
+<li>搜索引擎会根据标签的语义确定上下文和权重问题</li>
+<li>便于后期的开发以及维护，团队合作效率提高</li>
+</ul>
+<h3 id="用过哪些html5特性">用过哪些html5特性</h3><ul>
+<li>localstorage的使用，canvas的使用，doctype只需要简单定义，设置charset=uft-8</li>
+</ul>
+<h3 id="ajax和跨域">ajax和跨域</h3><ul>
+<li>创建一个ajax的过程：<br><strong> 创建引擎（xmlHttpRequest对象）new XMLHttpRequest or new AcitveXObject
+</strong> 事件处理函数，处理服务器的响应结果 onreadystatechange<br>readyState == 4 or status == 200<br>responseText包含了从服务器发送的数据<br>每次 readyState 值的改变，都会触发 readystatechange 事件<br><strong> 打开一个连接open(method, url, asynch)
+</strong> 发送数据send(data)</li>
+<li>跨域<br><strong> 动态创建js，如jsonp的实现
+</strong> document.domain+iframe的设置<br>** flash的实现</li>
+</ul>
+<ul>
+<li>事件代理</li>
+</ul>
+<p>通过它你可以把事件处理器添加到一个父级元素上，这样就避免了把事件处理器添加到多个子级元素上。事件冒泡以及目标元素。<br>使用事件代理，我们可以把事件处理器添加到一个元素上，等待一个事件从它的子级元素里冒泡上来，并且可以得知这个事件是从哪个元素开始的。<br><strong> 性能要好
+</strong> 针对新创建的元素，直接可以拥有事件</p>
+<ul>
+<li><p>盒模型d<br>有两种， IE 盒子模型、标准 W3C 盒子模型；IE的content部分包含了 border 和 padding;<br>盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border).</p>
+</li>
+<li><p>css的position<br>** absolute </p>
+<pre><code>生成绝对定位的元素，相对于 <span class="keyword">static</span> 定位以外的第一个祖先元素进行定位。 
+</code></pre></li>
+</ul>
+<p>** fixed （老IE不支持）<br>    生成绝对定位的元素，相对于浏览器窗口进行定位。 </p>
+<p>** relative<br>    生成相对定位的元素，相对于其在普通流中的位置进行定位。 </p>
+<p><strong> static  默认值。没有定位，元素出现在正常的流中<br>    （忽略 top, bottom, left, right z-index 声明）。
+</strong> inherit 规定从父元素继承 position 属性的值。</p>
+<ul>
+<li>css的flex</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> <span class="comment">/*flex布局（作用于容器）*/</span></span><br><span class="line"><span class="rule"><span class="attribute">display</span>:<span class="value"> flex</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*水平居中（作用于容器）*/</span></span><br><span class="line"><span class="rule"><span class="attribute">justify-content</span>:<span class="value"> center</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*垂直居中（作用于容器）*/</span></span><br><span class="line"><span class="rule"><span class="attribute">align-items</span>:<span class="value"> center</span></span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>闭包<br>一个函数能够访问到另一个函数内的变量！<br><code>函数作为返回值，函数作为参数传递。</code></p>
+</li>
+<li><p>this<br>在函数中this到底取何值，是在函数真正被调用执行的时候确定的，函数定义的时候确定不了<br>因为this的取值是执行上下文环境的一部分，每次调用函数，都会产生一个新的执行上下文环境。</p>
+</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cqolife.com/blog/2015/05/27/object/" data-id="cia6de3zm000g5pvopjycl6gz" class="article-share-link">Share</a>
+      <a data-url="http://cqolife.com/blog/2015/05/27/object/" data-id="cibu7q2mg000gycvohje99za0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javacript/">javacript</a></li></ul>
