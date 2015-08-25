@@ -111,5 +111,6 @@ categories:
 
 ```
 
-
-[转](https://blog.coding.net/blog/the-difference-between-throttle-and-debounce-in-underscorejs)
+**参考阅读**
+- [浅谈 Underscore.js 中 _.throttle 和 _.debounce 的差异](https://blog.coding.net/blog/the-difference-between-throttle-and-debounce-in-underscorejs)
+- [高阶函数 debounce 和 throttle](http://www.cnblogs.com/ambar/archive/2011/10/08/throttle-and-debounce.html)
