@@ -52,7 +52,7 @@ Anim.method('stop',function() {});
 
 ### ajax和跨域
 * 创建一个ajax的过程：
-** 创建引擎（xmlHttpRequest对象）new XMLHttpRequest or new AcitveXObject
+** 创建引擎（xmlHttpRequest对象）new XMLHttpRequest or new ActiveXObject
 ** 事件处理函数，处理服务器的响应结果 onreadystatechange 
 readyState == 4 or status == 200
 responseText包含了从服务器发送的数据
