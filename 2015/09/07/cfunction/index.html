@@ -3,20 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>types | cqolife</title>
+  <title>学习笔记-设计模式之构造函数模式 | cqolife</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="javascript中得各种数据类型基本数据类型：number, string, Boolean复合（应用）数据类型：function, object, array特殊数据类型：undefined, null
-待续……">
+  <meta name="description" content="构造函数用于创建特定类型的对象——不仅声明了使用的对象，构造函数还可以接受参数以便第一次创建对象的时候设置对象的成员值。你可以自定义自己的构造函数，然后在里面声明自定义类型对象的属性或方法。
+**原始包装函数
+JavaScript里有3中原始包装函数：number, string, boolean，有时候两种都用：
+12345678910// 使用原始包装函数var s = new String(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="types">
-<meta property="og:url" content="http://cqolife.com/blog/2015/05/11/types/index.html">
+<meta property="og:title" content="学习笔记-设计模式之构造函数模式">
+<meta property="og:url" content="http://cqolife.com/blog/2015/09/07/cfunction/index.html">
 <meta property="og:site_name" content="cqolife">
-<meta property="og:description" content="javascript中得各种数据类型基本数据类型：number, string, Boolean复合（应用）数据类型：function, object, array特殊数据类型：undefined, null
-待续……">
+<meta property="og:description" content="构造函数用于创建特定类型的对象——不仅声明了使用的对象，构造函数还可以接受参数以便第一次创建对象的时候设置对象的成员值。你可以自定义自己的构造函数，然后在里面声明自定义类型对象的属性或方法。
+**原始包装函数
+JavaScript里有3中原始包装函数：number, string, boolean，有时候两种都用：
+12345678910// 使用原始包装函数var s = new String(">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="types">
-<meta name="twitter:description" content="javascript中得各种数据类型基本数据类型：number, string, Boolean复合（应用）数据类型：function, object, array特殊数据类型：undefined, null
-待续……">
+<meta name="twitter:title" content="学习笔记-设计模式之构造函数模式">
+<meta name="twitter:description" content="构造函数用于创建特定类型的对象——不仅声明了使用的对象，构造函数还可以接受参数以便第一次创建对象的时候设置对象的成员值。你可以自定义自己的构造函数，然后在里面声明自定义类型对象的属性或方法。
+**原始包装函数
+JavaScript里有3中原始包装函数：number, string, boolean，有时候两种都用：
+12345678910// 使用原始包装函数var s = new String(">
   
     <link rel="alternative" href="/atom.xml" title="cqolife" type="application/atom+xml">
   
@@ -66,14 +72,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-types" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-cfunction" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/2015/05/11/types/" class="article-date">
-  <time datetime="2015-05-11T01:48:09.000Z" itemprop="datePublished">2015-05-11</time>
+    <a href="/blog/2015/09/07/cfunction/" class="article-date">
+  <time datetime="2015-09-07T02:22:48.000Z" itemprop="datePublished">2015-09-07</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/javacript/">javacript</a>►<a class="article-category-link" href="/blog/categories/javacript/数据类型/">数据类型</a>
+    <a class="article-category-link" href="/blog/categories/javacript/">javacript</a>►<a class="article-category-link" href="/blog/categories/javacript/设计模式/">设计模式</a>
   </div>
 
   </div>
@@ -84,7 +90,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      types
+      学习笔记-设计模式之构造函数模式
     </h1>
   
 
@@ -92,13 +98,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="javascript中得各种数据类型">javascript中得各种数据类型</h3><p>基本数据类型：number, string, Boolean<br>复合（应用）数据类型：function, object, array<br>特殊数据类型：undefined, null</p>
-<p>待续……</p>
-
+        <p>构造函数用于创建特定类型的对象——不仅声明了使用的对象，构造函数还可以接受参数以便第一次创建对象的时候设置对象的成员值。<br>你可以自定义自己的构造函数，然后在里面声明自定义类型对象的属性或方法。</p>
+<p>**原始包装函数</p>
+<p>JavaScript里有3中原始包装函数：number, string, boolean，有时候两种都用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用原始包装函数</span></span><br><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"my string"</span>);</span><br><span class="line"><span class="keyword">var</span> n = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">101</span>);</span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 推荐这种</span></span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"my string"</span>;</span><br><span class="line"><span class="keyword">var</span> n = <span class="number">101</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<p>推荐，只有在想保留数值状态的时候使用这些包装函数，关于区别可以参考下面的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 原始string</span></span><br><span class="line"><span class="keyword">var</span> greet = <span class="string">"Hello there"</span>;</span><br><span class="line"><span class="comment">// 使用split()方法分割</span></span><br><span class="line">greet.split(<span class="string">' '</span>)[<span class="number">0</span>]; <span class="comment">// "Hello"</span></span><br><span class="line"><span class="comment">// 给原始类型添加新属性不会报错</span></span><br><span class="line">greet.smile = <span class="literal">true</span>;</span><br><span class="line"><span class="comment">// 单没法获取这个值（18章ECMAScript实现里我们讲了为什么）</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> greet.smile); <span class="comment">// "undefined"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 原始string</span></span><br><span class="line"><span class="keyword">var</span> greet = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"Hello there"</span>);</span><br><span class="line"><span class="comment">// 使用split()方法分割</span></span><br><span class="line">greet.split(<span class="string">' '</span>)[<span class="number">0</span>]; <span class="comment">// "Hello"</span></span><br><span class="line"><span class="comment">// 给包装函数类型添加新属性不会报错</span></span><br><span class="line">greet.smile = <span class="literal">true</span>;</span><br><span class="line"><span class="comment">// 可以正常访问新属性</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> greet.smile); <span class="comment">// "boolean"</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cqolife.com/blog/2015/05/11/types/" data-id="cie9beu0l0007tsvo0q6zlv2f" class="article-share-link">Share</a>
+      <a data-url="http://cqolife.com/blog/2015/09/07/cfunction/" data-id="cie9betzv0000tsvot94v5y2u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javacript/">javacript</a></li></ul>
@@ -110,19 +119,10 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2015/05/14/shejimoshi-founder/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          学习笔记-设计模式之创建者模式
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/2015/05/08/notes/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/2015/08/25/throttle-debounce/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">notes</div>
+      <div class="article-nav-title">throttle_debounce</div>
     </a>
   
 </nav>
